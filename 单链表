@@ -1,0 +1,17 @@
+反序链表中的前n个结点
+···
+class Solution:
+    successor = None
+    def reverseN(self, head, n):
+        if head == None or (head.next ==  None and n == 1):
+            Solution.successor = None
+            return head
+        elif n == 1:
+            Solution.successor = head.next
+            return head
+        else:
+            last = self.reverseN(head.next, n-1)
+            head.next.next = head
+            head.next = Solution.successor
+            return last
+···            
