@@ -1,5 +1,5 @@
 反序链表中的前n个结点
-···
+```python
 class Solution:
     successor = None
     def reverseN(self, head, n):
